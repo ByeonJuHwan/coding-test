@@ -1,5 +1,7 @@
 package dev.be.codingtest.String;
 
+import java.util.Scanner;
+
 public class SearchDocument {
 
     /*
@@ -41,6 +43,24 @@ public class SearchDocument {
 
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String doc = sc.nextLine();
+        String word = sc.nextLine();
 
+        int startIndex = 0;
+        int count = 0;
+
+        while (true) {
+            /*
+            indexOf -> 단어를 주고 시작인덱스를주면 일치하는 단어의 인덱스를 리턴해준다. 없을경우 -1 return
+             */
+
+            int matchIndex = doc.indexOf(word, startIndex);
+            if (matchIndex < 0) break;
+            startIndex = matchIndex + word.length();
+            count++;
+        }
+
+        System.out.println(count);
     }
 }
