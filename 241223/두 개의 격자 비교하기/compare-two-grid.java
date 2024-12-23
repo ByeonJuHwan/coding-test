@@ -16,7 +16,7 @@ public class Main {
 
         for(int i = 0; i<n*2; i++) {
             for(int j = 0; j<m; j++) {
-                if(i>3) arr2[i-n][j] = sc.nextInt();
+                if(i>n-1) arr2[i-n][j] = sc.nextInt();
                 else arr1[i][j] = sc.nextInt();
             }
         }
