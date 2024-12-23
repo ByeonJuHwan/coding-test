@@ -1,0 +1,32 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        // 여기에 코드를 작성해주세요.
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+
+        int [][] arr1 = new int [n][m];
+        int [][] arr2 = new int [n][m];
+    
+        
+
+        for(int i = 0; i<8; i++) {
+            for(int j = 0; j<4; j++) {
+                if(i>3) arr2[i-4][j] = sc.nextInt();
+                else arr1[i][j] = sc.nextInt();
+            }
+        }
+
+        for(int i = 0; i<4; i++) {
+            for(int j = 0; j<4; j++) {
+                if(arr1[i][j] == arr2[i][j]) System.out.print(0 + " ");
+                else System.out.print(1 + " ");
+            }
+            System.out.println();
+        }
+    }
+}
