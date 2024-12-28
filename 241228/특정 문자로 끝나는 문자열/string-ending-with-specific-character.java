@@ -12,10 +12,17 @@ public class Main {
 
         char c = sc.next().charAt(0);
 
+        boolean isNone = true;
+
         for(int i = 0; i<10; i++) {
             int len = arr[i].length();
-            if(arr[i].charAt(len-1)==c) System.out.println(arr[i]);
+            if(arr[i].charAt(len-1)==c) {
+                isNone = false;
+                System.out.println(arr[i]);
+            }
         }
+
+        if(isNone) System.out.print("None");
 
     }
 }
