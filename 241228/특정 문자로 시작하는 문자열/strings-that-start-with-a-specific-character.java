@@ -22,11 +22,9 @@ public class Main {
         for(String s : arr) {
             int len = s.length();
 
-            for(int i = 0; i<len; i++) {
-                if(c == s.charAt(i)) {
-                    count++;
-                    sum += len;
-                }
+                       if(c == s.charAt(0)) {
+                count++;
+                sum += s.length();
             }
             
         }
