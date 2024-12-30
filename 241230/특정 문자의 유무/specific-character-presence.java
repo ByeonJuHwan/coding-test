@@ -9,7 +9,7 @@ public class Main {
         String s = sc.next();
 
         if(s.contains("ee")) System.out.print("Yes");
-        else System.out.print("no");
+        else System.out.print("No");
 
         System.out.print(" ");
 
