@@ -9,6 +9,8 @@ public class Main {
         int A = sc.nextInt();
         int B = sc.nextInt();
 
+        if(A==1) A =2;
+
         System.out.print(sumOfPrime(A,B));
     }
 
