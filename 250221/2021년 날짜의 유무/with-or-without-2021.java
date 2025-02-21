@@ -9,6 +9,12 @@ public class Main {
         int m = sc.nextInt();
         int d = sc.nextInt();
 
+        if(m>12) {
+            System.out.print("No");
+            return;
+        }
+        
+
         if(is31days(m)) {
             is31Avaliable(d);
         } else {
