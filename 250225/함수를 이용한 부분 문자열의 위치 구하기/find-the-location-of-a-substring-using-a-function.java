@@ -20,14 +20,20 @@ public class Main {
             
             if (arr[i] == unit.charAt(0)) {
                 result = i;
+                boolean isFirstIndex = true;
 
                 for(int j = 0; j<unit.length(); j++) {
                     if(arr[i + j] != unit.charAt(j)) {
                         result = -1;
+                        isFirstIndex = false;
                         break;
                     }
                 }
 
+                if(isFirstIndex) {
+                    System.out.print(result);
+                    return;
+                }
             }
         }
 
