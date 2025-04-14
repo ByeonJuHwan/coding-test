@@ -16,10 +16,13 @@ public class Main {
         // Please write your code here.
 
         Arrays.sort(arr, (a,b) -> {
-            if(((a.x * a.x) + (a.y * a.y)) == ((b.x * b.x) + (b.y * b.y))) {
+            int distA = Math.abs(a.x) + Math.abs(a.y);
+            int distB = Math.abs(b.x) + Math.abs(b.y);
+            
+            if(distA == distB) {
                 return a.num - b.num;
             }
-            return ((a.x * a.x) + (a.y * a.y)) - ((b.x * b.x) + (b.y * b.y));
+            return distA - distB;
         });
 
         for(Dot d : arr) {
